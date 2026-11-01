@@ -1,0 +1,39 @@
+---
+strategy: static
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: |-
+  {
+    "engineers": [
+      {"first_name": "Maya", "last_name": "Okafor", "degree": "MS", "major": "Electrical Engineering", "school": "Texas A&M", "grad_date": "2028-05-10"},
+      {"first_name": "Diego", "last_name": "Ramirez", "degree": "BS", "major": "Electrical Engineering", "school": "UT Austin", "grad_date": "2027-05-18"},
+      {"first_name": "Priya", "last_name": "Venkataraman", "degree": "MS", "major": "Electrical Engineering", "school": "Georgia Tech", "grad_date": "2028-12-13"},
+      {"first_name": "Ethan", "last_name": "Caldwell", "degree": "BS", "major": "Mechanical Engineering", "school": "Texas Tech", "grad_date": "2027-12-14"},
+      {"first_name": "Grace", "last_name": "Liu", "degree": "BS", "major": "Electrical Engineering", "school": "Rice University", "grad_date": "2027-05-11"},
+      {"first_name": "Samuel", "last_name": "Adeyemi", "degree": "MS", "major": "Civil Engineering", "school": "UT Arlington", "grad_date": "2028-05-17"},
+      {"first_name": "Hannah", "last_name": "Brooks", "degree": "BS", "major": "Electrical Engineering", "school": "Oklahoma State", "grad_date": "2029-05-09"},
+      {"first_name": "Marcus", "last_name": "Delgado", "degree": "BS", "major": "Computer Engineering", "school": "UT Dallas", "grad_date": "2029-05-16"},
+      {"first_name": "Aisha", "last_name": "Rahman", "degree": "BS", "major": "Electrical Engineering", "school": "University of Houston", "grad_date": "2029-05-08"},
+      {"first_name": "Tyler", "last_name": "Nguyen", "degree": "BS", "major": "Mechanical Engineering", "school": "Texas State", "grad_date": "2029-05-15"}
+    ]
+  }
+polling_verb: get
+framework_version: 3.4.4
+serverless_language: ''
+refresh_interval_floor: ''
+polling_url: ''
+polling_headers: ''
+polling_body: ''
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
+custom_fields:
+- keyname: author_bio
+  field_type: author_bio
+  name: About This Plugin
+  description: The "EDP Rankings" plugin ranks the engineers in the Engineering Development Program -- drawn anew each day, with how each one moved since the last draw.
+  category: productivity
+  email_address: Contact@DitherData.com
+name: EDP Rankings
+description: EDP engineer rankings
+refresh_interval: 60
+id: 527192

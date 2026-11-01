@@ -1,0 +1,17 @@
+{% comment %}
+  Prepended to every layout file. The data is transform.py's output from
+  static_data in settings.yml: `as_of` (YYYY-MM-DD, the day of the draw) and
+  `engineers` in rank order, each with `rank`, `prev_rank`, `change` (places
+  up since the last draw, negative down, nil when new), `first_name`,
+  `last_name`, `degree` and `major`, `school` and `grad_date` (YYYY-MM-DD).
+
+  Only the full view is designed; the others list the top of the ranking.
+{% endcomment %}
+{% assign as_of_text = as_of | date: "%b %-d, %Y" %}
+
+{% capture title_bar %}
+<div class="title_bar">
+    <span class="title">EDP Rankings</span>
+    <span class="instance">As of {{ as_of_text }}</span>
+</div>
+{% endcapture %}

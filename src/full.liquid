@@ -1,0 +1,28 @@
+{% comment %}800x480: every engineer, one row each, the rows stretched to fill the panel, with the places moved since the last draw.{% endcomment %}
+<div class="layout layout--col layout--top">
+    <table class="table table--condensed w--full grow">
+        <thead>
+            <tr>
+                <th class="w--12 lg:w--16"><span class="title title--small">#</span></th>
+                <th class="w--14"><span class="title title--small">Move</span></th>
+                <th><span class="title title--small">Engineer</span></th>
+                <th><span class="title title--small">Degree</span></th>
+                <th><span class="title title--small">School</span></th>
+                <th><span class="title title--small">Graduation</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in engineers %}
+            <tr>
+                <td><span class="value value--small lg:value value--tnums">{{ e.rank }}</span></td>
+                <td><span class="label">{% if e.change == nil %}NEW{% elsif e.change > 0 %}<span class="text--gray-30">&#9650; {{ e.change }}</span>{% elsif e.change < 0 %}&#9660; {{ e.change | abs }}{% else %}&ndash;{% endif %}</span></td>
+                <td><span class="label clamp--1">{{ e.first_name }} {{ e.last_name }}</span></td>
+                <td><span class="label clamp--1">{{ e.degree }} {{ e.major }}</span></td>
+                <td><span class="label clamp--1">{{ e.school }}</span></td>
+                <td><span class="label clamp--1">{{ e.grad_date | date: "%b %-d, %Y" }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{{ title_bar }}

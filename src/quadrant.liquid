@@ -1,0 +1,15 @@
+{% comment %}400x240: the top 4, name and move.{% endcomment %}
+<div class="layout layout--col layout--top">
+    <table class="table table--condensed">
+        <tbody>
+            {% for e in engineers limit: 4 %}
+            <tr>
+                <td><span class="label">{{ e.rank }}</span></td>
+                <td><span class="label clamp--1">{{ e.first_name }} {{ e.last_name }}</span></td>
+                <td><span class="label">{% if e.change == nil %}NEW{% elsif e.change > 0 %}<span class="text--gray-30">&#9650; {{ e.change }}</span>{% elsif e.change < 0 %}&#9660; {{ e.change | abs }}{% else %}&ndash;{% endif %}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{{ title_bar }}
